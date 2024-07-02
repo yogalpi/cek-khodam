@@ -355,8 +355,8 @@
 
     </style>
 </head>
-<body>
-    <div class="container d-flex justify-content-center align-items-start" id="konten" style="height: 110svh ; background-color: #222831;">
+<body style="background-color: #222831;">
+    <div class="container d-flex justify-content-center align-items-start" style="height: 110svh ; background-color: #222831;">
         <div class="col-12 d-flex align-items-center flex-column mt-5 px-4 pt-4 position-relative" style="background-color: #31363F; border-radius: 20px; color: #fff;">
             <div class="d-flex flex-column">
                 <h2 class="text-center">All In One<br>Checking Apps</h2>
@@ -571,7 +571,6 @@
 
     function cek(){
         clear();
-        document.getElementById('konten').style.height = '120svh';
         radio = document.querySelector('input[name="cek"]:checked').value;
         nama = document.getElementById('nama').value;
         if(validation()){

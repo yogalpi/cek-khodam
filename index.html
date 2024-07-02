@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Khodam</title>
+    <title>All In One Checking Apps</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -36,7 +36,215 @@
             transform: translate(0%, 75%);
         }
 
-        #bottone1 {
+        .pl {
+            width: 6em;
+            height: 6em;
+            margin:auto;
+            left: 0%;
+            transform: translate(165%, 330%);
+            }
+
+            .pl__ring {
+            animation: ringA 2s linear infinite;
+            }
+
+            .pl__ring--a {
+            stroke: #f42f25;
+            }
+
+            .pl__ring--b {
+            animation-name: ringB;
+            stroke: #f49725;
+            }
+
+            .pl__ring--c {
+            animation-name: ringC;
+            stroke: #255ff4;
+            }
+
+            .pl__ring--d {
+            animation-name: ringD;
+            stroke: #f42582;
+            }
+
+            /* Animations */
+            @keyframes ringA {
+            from, 4% {
+                stroke-dasharray: 0 660;
+                stroke-width: 20;
+                stroke-dashoffset: -330;
+            }
+
+            12% {
+                stroke-dasharray: 60 600;
+                stroke-width: 30;
+                stroke-dashoffset: -335;
+            }
+
+            32% {
+                stroke-dasharray: 60 600;
+                stroke-width: 30;
+                stroke-dashoffset: -595;
+            }
+
+            40%, 54% {
+                stroke-dasharray: 0 660;
+                stroke-width: 20;
+                stroke-dashoffset: -660;
+            }
+
+            62% {
+                stroke-dasharray: 60 600;
+                stroke-width: 30;
+                stroke-dashoffset: -665;
+            }
+
+            82% {
+                stroke-dasharray: 60 600;
+                stroke-width: 30;
+                stroke-dashoffset: -925;
+            }
+
+            90%, to {
+                stroke-dasharray: 0 660;
+                stroke-width: 20;
+                stroke-dashoffset: -990;
+            }
+            }
+
+            @keyframes ringB {
+            from, 12% {
+                stroke-dasharray: 0 220;
+                stroke-width: 20;
+                stroke-dashoffset: -110;
+            }
+
+            20% {
+                stroke-dasharray: 20 200;
+                stroke-width: 30;
+                stroke-dashoffset: -115;
+            }
+
+            40% {
+                stroke-dasharray: 20 200;
+                stroke-width: 30;
+                stroke-dashoffset: -195;
+            }
+
+            48%, 62% {
+                stroke-dasharray: 0 220;
+                stroke-width: 20;
+                stroke-dashoffset: -220;
+            }
+
+            70% {
+                stroke-dasharray: 20 200;
+                stroke-width: 30;
+                stroke-dashoffset: -225;
+            }
+
+            90% {
+                stroke-dasharray: 20 200;
+                stroke-width: 30;
+                stroke-dashoffset: -305;
+            }
+
+            98%, to {
+                stroke-dasharray: 0 220;
+                stroke-width: 20;
+                stroke-dashoffset: -330;
+            }
+            }
+
+            @keyframes ringC {
+            from {
+                stroke-dasharray: 0 440;
+                stroke-width: 20;
+                stroke-dashoffset: 0;
+            }
+
+            8% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -5;
+            }
+
+            28% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -175;
+            }
+
+            36%, 58% {
+                stroke-dasharray: 0 440;
+                stroke-width: 20;
+                stroke-dashoffset: -220;
+            }
+
+            66% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -225;
+            }
+
+            86% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -395;
+            }
+
+            94%, to {
+                stroke-dasharray: 0 440;
+                stroke-width: 20;
+                stroke-dashoffset: -440;
+            }
+            }
+
+            @keyframes ringD {
+            from, 8% {
+                stroke-dasharray: 0 440;
+                stroke-width: 20;
+                stroke-dashoffset: 0;
+            }
+
+            16% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -5;
+            }
+
+            36% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -175;
+            }
+
+            44%, 50% {
+                stroke-dasharray: 0 440;
+                stroke-width: 20;
+                stroke-dashoffset: -220;
+            }
+
+            58% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -225;
+            }
+
+            78% {
+                stroke-dasharray: 40 400;
+                stroke-width: 30;
+                stroke-dashoffset: -395;
+            }
+
+            86%, to {
+                stroke-dasharray: 0 440;
+                stroke-width: 20;
+                stroke-dashoffset: -440;
+            }
+            }
+
+            #bottone1 {
             border-radius: 9px;
             background: #d5f365;
             border: none;
@@ -57,18 +265,150 @@
             box-shadow: 7px 5px 56px -10px #C3D900;
             }
 
+            .pushable {
+                position: relative;
+                background: transparent;
+                padding: 0px;
+                border: none;
+                cursor: pointer;
+                outline-offset: 4px;
+                outline-color: deeppink;
+                transition: filter 250ms;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                }
+
+                .shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: hsl(226, 25%, 69%);
+                border-radius: 8px;
+                filter: blur(2px);
+                will-change: transform;
+                transform: translateY(2px);
+                transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+                }
+
+                .edge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 8px;
+                background: linear-gradient(
+                    to right,
+                    hsl(248, 39%, 39%) 0%,
+                    hsl(248, 39%, 49%) 8%,
+                    hsl(248, 39%, 39%) 92%,
+                    hsl(248, 39%, 29%) 100%
+                );
+                }
+
+                .front {
+                display: block;
+                position: relative;
+                border-radius: 8px;
+                background: hsl(248, 53%, 58%);
+                padding: 16px 32px;
+                color: white;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                font-size: 1rem;
+                transform: translateY(-4px);
+                transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+                }
+
+                .pushable:hover {
+                filter: brightness(110%);
+                }
+
+                .pushable:hover .front {
+                transform: translateY(-6px);
+                transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+                }
+
+                .pushable:active .front {
+                transform: translateY(-2px);
+                transition: transform 34ms;
+                }
+
+                .pushable:hover .shadow {
+                transform: translateY(4px);
+                transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+                }
+
+                .pushable:active .shadow {
+                transform: translateY(1px);
+                transition: transform 34ms;
+                }
+
+                .pushable:focus:not(:focus-visible) {
+                outline: none;
+                }
+
+
     </style>
 </head>
 <body>
-    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh ; background-color: #222831;">
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100svh ; background-color: #222831;">
         <div class="col-12 d-flex align-items-center flex-column px-4 pt-4 position-relative" style="background-color: #31363F; border-radius: 20px; color: #fff;">
-            <div class="d-flex">
-                <h2>Cek <span class="text-danger">Khodam</span></h2>
+            <div class="d-flex flex-column">
+                <h2 class="text-center">All In One<br>Checking Apps</h2>
             </div>
-            <p class="mt-3">Cek khodam yang ada di dalam diri kamu</p>
+            <p class="h6 mt-3">Melayani : </p>
+            <div class="container mt-3">
+                <div class="form-check">
+                    <input class="form-check-input d-none" value="0" type="radio" name="cek" checked>
+                    <input class="form-check-input" value="khodam" type="radio" name="cek" id="khodam">
+                    <label class="form-check-label" for="khodam">
+                        <h2>Cek <span class="text-danger">Khodam</span></h2>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" value="kuota" type="radio" name="cek" id="kuota">
+                    <label class="form-check-label" for="kuota">
+                      <h2>Cek <span class="text-success">Kuota</span></h2>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" value="saldo" type="radio" name="cek" id="saldo">
+                    <label class="form-check-label" for="saldo">
+                      <h2>Cek <span class="text-info">Saldo</span></h2>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" value="gula" type="radio" name="cek" id="gula">
+                    <label class="form-check-label" for="gula">
+                        <h2>Cek <span class="text-primary">Gula darah</span></h2>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" value="tensi" type="radio" name="cek" id="tensi">
+                    <label class="form-check-label" for="tensi">
+                        <h2>Cek <span class="text-warning">Tensi darah</span></h2>
+                    </label>
+                  </div>
+            </div>
+            <p class="h-6 mt-3 d-none">Cek khodam yang ada di dalam diri kamu</p>
+            <p class="h-6 mt-3 d-none">Cek Sisa Kuota kamu</p>
+            <p class="h-6 mt-3 d-none">Cek Jumlah Saldo kamu</p>
+            <p class="h-6 mt-3 d-none">Cek Kadar Gula Darah kamu</p>
+            <p class="h-6 mt-3 d-none">Cek Tensi Darah kamu</p>
             <input type="text" class="form-control p-3 px-4 mt-3" id="nama" placeholder="Nama Kamu" style="border-radius: 30px; background-color: #EEEEEE;" required autocomplete="off">
-            <button class="btn btn-primary mt-4 px-4 py-2" style="border-radius: 20px;" onclick="cekKhodam()">Cek</button>
-            <p class="h4 mt-5" id="khodam" style="text-transform: capitalize; text-align: center;"></p>
+            <button class="pushable mt-4" onclick="cek()">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front">
+                  Cek
+                </span>
+              </button>
+            <p class="h4 mt-5" id="valueCek" style="text-transform: capitalize; text-align: center;"></p>
             
             
             <a href="https://saweria.co/Loopi" id="bottone1" class="mt-5 mb-3 px-4 py-2"><strong>Feed me A Nasdang</strong><i class="fa-solid fa-bowl-food ms-2"></i></a>
@@ -76,48 +416,164 @@
         </div>
 
         <div class="position-absolute h-100 w-100" id="loading">
-            <dotlottie-player class="loading" src="https://lottie.host/199ab418-8393-4c21-9e52-1799495be187/XoHqBz1oKL.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+            <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+                <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            </svg>
         </div>
     </div>
 </body>
 
 <script>
-    const khodam = ['Macan', 'Harimau', 'Kabel USB', 'Oli Samping', 
+    let khodam = ['','Macan', 'Harimau', 'Kabel USB', 'Oli Samping', 
     'Kabel UTP', 'Router', 'XAMPP', 'yii2', 'Teh Pucuk', 
     'Sari Gandum', 'JAIM', 'Kiboyyyy', 'Sayur Asem', "Bu Na'ah", 
-    'CPU', 'Kontol Jepat', 'Pak Vincent', 'Skibidi', 'Sigma',
+    'CPU', 'Kont Jepat', 'Pak Vincent', 'Skibidi', 'Sigma',
     'Uni Bakwan', 'Mio Mirza', 'Yessus', 'Mosses', 'Kentang', 
-    'Wahyu', 'Amanah', 'Tauge', 'Tobrut Baik', 'Tobrut Jahat',
+    'Sarwendah', 'Amanah', 'Tauge', 'Tobrut Baik', 'Tobrut Jahat',
     'Kanjut Badag', 'Tuyul Mullet', 'Henceut Bereum', 'UD Lima Saudara',
     'El Drama', 'Gondrong', 'Mak Lampir', 'Nyai Blorong', 'Nyai Roro Panjang',
     'Super Tobrut', 'Jokowi', 'Must A Nice', 'Abe Cekut', 'Aspari', 'Julian',
     'Eat Sambel', 'Kerapu', 'Takari', 'Pur Ayam', 'Rusdi', 'Ambatron', 'Ambalingham',
     'Messi', 'Kuda Cuki', 'Tungau Biru', 'Jamet Kuproy', 'Master Limbad', 'Jamet Kudasi',
     'Bocil Crypto', 'Timothy', 'Mewing', 'Kai Cenat', 'PHP', 'Sprei Gratis', 'Romo',
-    'Ngab Owi', 'Brody', 'Zilong']
+    'Ngab Owi', 'Brody', 'Zilong', 'Topless', 'Kacang', 'Igun', 'Alul', 
+    'Jarrot', 'Kim Jong-Un', 'Bingciling', 'Gendolo', 'Growol', 'Bedal Herocyn',
+    'Ganjar-ganjar', 'Praroro', 'Ultramen Tobrut', 'Manusia Silver', 'Dudung']
 
     let index;
+    let radio;
     let nama;
-    function loading(){
-        document.getElementById('loading').style.display = 'none';
-        document.getElementById('khodam').innerHTML = 'Khodam '+nama+'<br><br><strong class="text-danger">'+khodam[index]+'</strong>';
-    }
+    let kata;
+    let satuan = ['KB', 'MB', 'GB'];
+    let valueKuota = ''; 
+    let valueSaldo = ''; 
+    let valueGula = ''; 
+    let valueTensi = ''; 
+    let kalimatKuota = ''; 
 
-    function cekKhodam(){
-        document.getElementById('khodam').innerHTML = '';
-        index = Math.floor(Math.random() * khodam.length);
-        nama = document.getElementById('nama').value;
-
-        if(nama == ''){
+    function validation(){
+        if(nama == '' && radio == '0'){
+            Swal.fire({
+            icon: "error",
+            title: "Goblok poll",
+            text: "Pilih Layanan & Input nama !!!",
+            });
+            return false;
+        }else if(nama == ''){
             Swal.fire({
             icon: "error",
             title: "Goblok...",
             text: "Harus Input Nama !",
             });
+            return false;
+        }else if(radio == '0'){
+            Swal.fire({
+            icon: "error",
+            title: "Goblok...",
+            text: "Pilih Layanan sek loh !",
+            });
+            return false;
+        }
+        return true;
+    }
+
+    function hideLoading(){
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('valueCek').innerHTML = kata+' '+nama+' '+kalimatKuota+' <br><br><strong class="text-success">'+valueKuota+'</strong> <strong class="text-info">'+valueSaldo+'</strong> <strong class="text-primary">'+valueGula+'</strong> <strong class="text-warning">'+valueTensi+'</strong> <strong class="text-danger">'+khodam[index]+'</strong>';
+    }
+
+    function cekKhodam(){
+        document.getElementById('valueCek').innerHTML = '';
+        index = Math.floor(Math.random() * khodam.length - 1);
+        index += 1;
+        document.getElementById('loading').style.display = 'block';
+        setTimeout(hideLoading, 1000);
+    }
+    
+    function cekKuota(){
+        document.getElementById('valueCek').innerHTML = '';
+        valueKuota = Math.floor(Math.random() * 10000)+' '+satuan[Math.floor(Math.random() * satuan.length)];
+        index = 0;
+        document.getElementById('loading').style.display = 'block';
+        setTimeout(hideLoading, 1000);
+    }
+
+    function cekSaldo(){
+        document.getElementById('valueCek').innerHTML = '';
+        valueSaldo = Math.floor(Math.random() * 90000000);
+        index = 0;
+        valueSaldo = valueSaldo.toLocaleString('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+        });
+        document.getElementById('loading').style.display = 'block';
+        setTimeout(hideLoading, 1000);
+    }
+
+    function cekGulaDarah(){
+        document.getElementById('valueCek').innerHTML = '';
+        valueGula = Math.floor(Math.random() * (200 - 50 + 1) + 50);
+        valueGula = valueGula+' mg/dL.'
+        index = 0;
+        document.getElementById('loading').style.display = 'block';
+        setTimeout(hideLoading, 1000);
+    }
+
+    function cekTensiDarah(){
+        document.getElementById('valueCek').innerHTML = '';
+        let systolic = Math.floor(Math.random() * (180 - 120 + 1) + 120);
+        let diastolic = Math.floor(Math.random() * (120 - 80 + 1) + 80);
+        valueTensi = `${systolic}/${diastolic} mmHg.`;
+        index = 0;
+        document.getElementById('loading').style.display = 'block';
+        setTimeout(hideLoading, 1000);
+    }
+
+    function execute(cek){
+        if(cek == 'khodam'){
+            kata = 'Khodam'
+            cekKhodam();
+        }else if(cek == 'kuota'){
+            kata = 'Plg. '
+            kalimatKuota = 'Sisa Kuota Kamu Sebesar';
+            cekKuota();
+        }else if(cek == 'saldo'){
+            kata = 'Saldo Rekening'
+            cekSaldo();
+        }else if(cek == 'gula'){
+            kata = 'Kadar Gula Darah'
+            cekGulaDarah();
         }else{
-            document.getElementById('loading').style.display = 'block';
-            setTimeout(loading, 1000);
+            kata = 'Tekanan Darah'
+            cekTensiDarah();
         }
     }
+
+    function clear(){
+        index = '';
+        radio = '';
+        nama = '';
+        kata = '';
+        valueKuota = ''; 
+        valueSaldo = ''; 
+        valueGula = ''; 
+        valueTensi = ''; 
+        kalimatKuota = '';
+    }
+
+    function cek(){
+        clear();
+        radio = document.querySelector('input[name="cek"]:checked').value;
+        nama = document.getElementById('nama').value;
+        if(validation()){
+            execute(radio);
+        }
+    }
+
+
+
 </script>
 </html>
